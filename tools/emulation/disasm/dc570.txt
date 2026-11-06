@@ -1,0 +1,149 @@
+
+/var/lib/flatpak/app/org.vinegarhq.Sober/x86_64/stable/7b6430c703e8178baa536062099fc5a1e0c7cf213c0789695fa7660b62cb9d26/files/bin/libloader.so:     file format binary
+
+
+Disassembly of section .data:
+
+00000000000dc570 <.data+0xdc570>:
+   dc570:	81 f9 69 5c d6 06    	cmp    ecx,0x6d65c69
+   dc576:	0f 8e 94 00 00 00    	jle    0xdc610
+   dc57c:	81 f9 02 b6 59 54    	cmp    ecx,0x5459b602
+   dc582:	0f 8f 18 01 00 00    	jg     0xdc6a0
+   dc588:	81 f9 6a 5c d6 06    	cmp    ecx,0x6d65c6a
+   dc58e:	0f 84 af 01 00 00    	je     0xdc743
+   dc594:	81 f9 69 a0 af 18    	cmp    ecx,0x18afa069
+   dc59a:	0f 84 e1 01 00 00    	je     0xdc781
+   dc5a0:	81 f9 bd b4 89 38    	cmp    ecx,0x3889b4bd
+   dc5a6:	0f 85 ff 01 00 00    	jne    0xdc7ab
+   dc5ac:	48 0f ca             	bswap  rdx
+   dc5af:	48 89 d6             	mov    rsi,rdx
+   dc5b2:	48 c1 ee 04          	shr    rsi,0x4
+   dc5b6:	4c 21 fe             	and    rsi,r15
+   dc5b9:	4c 21 fa             	and    rdx,r15
+   dc5bc:	48 c1 e2 04          	shl    rdx,0x4
+   dc5c0:	48 09 f2             	or     rdx,rsi
+   dc5c3:	48 89 d6             	mov    rsi,rdx
+   dc5c6:	48 bf 33 33 33 33 33 	movabs rdi,0x3333333333333333
+   dc5cd:	33 33 33 
+   dc5d0:	48 21 fe             	and    rsi,rdi
+   dc5d3:	48 c1 ea 02          	shr    rdx,0x2
+   dc5d7:	48 21 fa             	and    rdx,rdi
+   dc5da:	48 8d 14 b2          	lea    rdx,[rdx+rsi*4]
+   dc5de:	48 89 d6             	mov    rsi,rdx
+   dc5e1:	48 bf 55 55 55 55 55 	movabs rdi,0x5555555555555555
+   dc5e8:	55 55 55 
+   dc5eb:	48 21 fe             	and    rsi,rdi
+   dc5ee:	48 d1 ea             	shr    rdx,1
+   dc5f1:	48 21 fa             	and    rdx,rdi
+   dc5f4:	48 8d 14 72          	lea    rdx,[rdx+rsi*2]
+   dc5f8:	be d7 e8 5f 3e       	mov    esi,0x3e5fe8d7
+   dc5fd:	31 f1                	xor    ecx,esi
+   dc5ff:	e9 6c ff ff ff       	jmp    0xdc570
+   dc604:	66 66 66 2e 0f 1f 84 	data16 data16 cs nop WORD PTR [rax+rax*1+0x0]
+   dc60b:	00 00 00 00 00 
+   dc610:	81 f9 0c ad 59 b5    	cmp    ecx,0xb559ad0c
+   dc616:	0f 8f b7 00 00 00    	jg     0xdc6d3
+   dc61c:	81 f9 c4 aa d0 83    	cmp    ecx,0x83d0aac4
+   dc622:	0f 84 e7 fe ff ff    	je     0xdc50f
+   dc628:	81 f9 c4 ab ea 8e    	cmp    ecx,0x8eeaabc4
+   dc62e:	0f 84 3e 01 00 00    	je     0xdc772
+   dc634:	81 f9 0a 66 4c 90    	cmp    ecx,0x904c660a
+   dc63a:	0f 85 6b 01 00 00    	jne    0xdc7ab
+   dc640:	48 0f ca             	bswap  rdx
+   dc643:	48 89 d6             	mov    rsi,rdx
+   dc646:	48 c1 ee 04          	shr    rsi,0x4
+   dc64a:	4c 21 fe             	and    rsi,r15
+   dc64d:	4c 21 fa             	and    rdx,r15
+   dc650:	48 c1 e2 04          	shl    rdx,0x4
+   dc654:	48 09 f2             	or     rdx,rsi
+   dc657:	48 89 d6             	mov    rsi,rdx
+   dc65a:	48 bf 33 33 33 33 33 	movabs rdi,0x3333333333333333
+   dc661:	33 33 33 
+   dc664:	48 21 fe             	and    rsi,rdi
+   dc667:	48 c1 ea 02          	shr    rdx,0x2
+   dc66b:	48 21 fa             	and    rdx,rdi
+   dc66e:	48 8d 14 b2          	lea    rdx,[rdx+rsi*4]
+   dc672:	48 89 d6             	mov    rsi,rdx
+   dc675:	48 bf 55 55 55 55 55 	movabs rdi,0x5555555555555555
+   dc67c:	55 55 55 
+   dc67f:	48 21 fe             	and    rsi,rdi
+   dc682:	48 d1 ea             	shr    rdx,1
+   dc685:	48 21 fa             	and    rdx,rdi
+   dc688:	48 8d 14 72          	lea    rdx,[rdx+rsi*2]
+   dc68c:	be ee 89 72 41       	mov    esi,0x417289ee
+   dc691:	31 f1                	xor    ecx,esi
+   dc693:	e9 d8 fe ff ff       	jmp    0xdc570
+   dc698:	0f 1f 84 00 00 00 00 	nop    DWORD PTR [rax+rax*1+0x0]
+   dc69f:	00 
+   dc6a0:	81 f9 03 b6 59 54    	cmp    ecx,0x5459b603
+   dc6a6:	0f 84 a6 00 00 00    	je     0xdc752
+   dc6ac:	81 f9 14 1f 3e 75    	cmp    ecx,0x753e1f14
+   dc6b2:	0f 84 da 00 00 00    	je     0xdc792
+   dc6b8:	81 f9 8b c1 fb 79    	cmp    ecx,0x79fbc18b
+   dc6be:	0f 85 e7 00 00 00    	jne    0xdc7ab
+   dc6c4:	48 0f ca             	bswap  rdx
+   dc6c7:	be 9f de c5 0c       	mov    esi,0xcc5de9f
+   dc6cc:	31 f1                	xor    ecx,esi
+   dc6ce:	e9 9d fe ff ff       	jmp    0xdc570
+   dc6d3:	81 f9 0d ad 59 b5    	cmp    ecx,0xb559ad0d
+   dc6d9:	0f 84 82 00 00 00    	je     0xdc761
+   dc6df:	81 f9 e4 ef 3e d1    	cmp    ecx,0xd13eefe4
+   dc6e5:	0f 85 b8 00 00 00    	jne    0xdc7a3
+   dc6eb:	48 0f ca             	bswap  rdx
+   dc6ee:	48 89 d6             	mov    rsi,rdx
+   dc6f1:	48 c1 ee 04          	shr    rsi,0x4
+   dc6f5:	4c 21 fe             	and    rsi,r15
+   dc6f8:	4c 21 fa             	and    rdx,r15
+   dc6fb:	48 c1 e2 04          	shl    rdx,0x4
+   dc6ff:	48 09 f2             	or     rdx,rsi
+   dc702:	48 89 d6             	mov    rsi,rdx
+   dc705:	48 bf 33 33 33 33 33 	movabs rdi,0x3333333333333333
+   dc70c:	33 33 33 
+   dc70f:	48 21 fe             	and    rsi,rdi
+   dc712:	48 c1 ea 02          	shr    rdx,0x2
+   dc716:	48 21 fa             	and    rdx,rdi
+   dc719:	48 8d 14 b2          	lea    rdx,[rdx+rsi*4]
+   dc71d:	48 89 d6             	mov    rsi,rdx
+   dc720:	48 bf 55 55 55 55 55 	movabs rdi,0x5555555555555555
+   dc727:	55 55 55 
+   dc72a:	48 21 fe             	and    rsi,rdi
+   dc72d:	48 d1 ea             	shr    rdx,1
+   dc730:	48 21 fa             	and    rdx,rdi
+   dc733:	48 8d 14 72          	lea    rdx,[rdx+rsi*2]
+   dc737:	be 92 07 8d 1f       	mov    esi,0x1f8d0792
+   dc73c:	31 f1                	xor    ecx,esi
+   dc73e:	e9 2d fe ff ff       	jmp    0xdc570
+   dc743:	4c 01 e2             	add    rdx,r12
+   dc746:	be ae f6 06 85       	mov    esi,0x8506f6ae
+   dc74b:	31 f1                	xor    ecx,esi
+   dc74d:	e9 1e fe ff ff       	jmp    0xdc570
+   dc752:	be c7 1d b3 da       	mov    esi,0xdab31dc7
+   dc757:	4c 89 c2             	mov    rdx,r8
+   dc75a:	31 f1                	xor    ecx,esi
+   dc75c:	e9 0f fe ff ff       	jmp    0xdc570
+   dc761:	48 0f a4 d2 31       	shld   rdx,rdx,0x31
+   dc766:	be 07 cb 15 25       	mov    esi,0x2515cb07
+   dc76b:	31 f1                	xor    ecx,esi
+   dc76d:	e9 fe fd ff ff       	jmp    0xdc570
+   dc772:	48 0f ca             	bswap  rdx
+   dc775:	be 79 1f 63 b6       	mov    esi,0xb6631f79
+   dc77a:	31 f1                	xor    ecx,esi
+   dc77c:	e9 ef fd ff ff       	jmp    0xdc570
+   dc781:	48 0f a4 d2 1a       	shld   rdx,rdx,0x1a
+   dc786:	be 64 0d f6 ad       	mov    esi,0xadf60d64
+   dc78b:	31 f1                	xor    ecx,esi
+   dc78d:	e9 de fd ff ff       	jmp    0xdc570
+   dc792:	48 0f a4 d2 1a       	shld   rdx,rdx,0x1a
+   dc797:	be 7d bf 91 6d       	mov    esi,0x6d91bf7d
+   dc79c:	31 f1                	xor    ecx,esi
+   dc79e:	e9 cd fd ff ff       	jmp    0xdc570
+   dc7a3:	81 f9 76 e8 b3 ce    	cmp    ecx,0xceb3e876
+   dc7a9:	74 15                	je     0xdc7c0
+   dc7ab:	31 f1                	xor    ecx,esi
+   dc7ad:	e9 be fd ff ff       	jmp    0xdc570
+   dc7b2:	66 66 66 66 66 2e 0f 	data16 data16 data16 data16 cs nop WORD PTR [rax+rax*1+0x0]
+   dc7b9:	1f 84 00 00 00 00 00 
+   dc7c0:	48 8d 34 10          	lea    rsi,[rax+rdx*1]
+   dc7c4:	48 83 c6 10          	add    rsi,0x10
+   dc7c8:	b8 0a 00 00 00       	mov    eax,0xa
+   dc7cd:	ba 05 00         	mov    edx,0x5

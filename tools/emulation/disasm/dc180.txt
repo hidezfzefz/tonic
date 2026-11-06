@@ -1,0 +1,277 @@
+
+/var/lib/flatpak/app/org.vinegarhq.Sober/x86_64/stable/7b6430c703e8178baa536062099fc5a1e0c7cf213c0789695fa7660b62cb9d26/files/bin/libloader.so:     file format binary
+
+
+Disassembly of section .data:
+
+00000000000dc180 <.data+0xdc180>:
+   dc180:	b8 93 d4 c1 7d       	mov    eax,0x7dc1d493
+   dc185:	31 c9                	xor    ecx,ecx
+   dc187:	31 d2                	xor    edx,edx
+   dc189:	eb 15                	jmp    0xdc1a0
+   dc18b:	3d 38 c6 e9 66       	cmp    eax,0x66e9c638
+   dc190:	0f 84 8a 01 00 00    	je     0xdc320
+   dc196:	31 d0                	xor    eax,edx
+   dc198:	0f 1f 84 00 00 00 00 	nop    DWORD PTR [rax+rax*1+0x0]
+   dc19f:	00 
+   dc1a0:	3d 73 fc d9 f6       	cmp    eax,0xf6d9fc73
+   dc1a5:	7f 39                	jg     0xdc1e0
+   dc1a7:	3d 26 c0 6c cb       	cmp    eax,0xcb6cc026
+   dc1ac:	7e 62                	jle    0xdc210
+   dc1ae:	3d 27 c0 6c cb       	cmp    eax,0xcb6cc027
+   dc1b3:	0f 84 3f 01 00 00    	je     0xdc2f8
+   dc1b9:	3d 57 3c d9 d9       	cmp    eax,0xd9d93c57
+   dc1be:	0f 84 da 00 00 00    	je     0xdc29e
+   dc1c4:	3d 40 35 46 e8       	cmp    eax,0xe8463540
+   dc1c9:	75 cb                	jne    0xdc196
+   dc1cb:	80 c1 6f             	add    cl,0x6f
+   dc1ce:	ba 98 9f 8e f4       	mov    edx,0xf48e9f98
+   dc1d3:	31 d0                	xor    eax,edx
+   dc1d5:	eb c9                	jmp    0xdc1a0
+   dc1d7:	66 0f 1f 84 00 00 00 	nop    WORD PTR [rax+rax*1+0x0]
+   dc1de:	00 00 
+   dc1e0:	3d d7 aa c8 1c       	cmp    eax,0x1cc8aad7
+   dc1e5:	7e 69                	jle    0xdc250
+   dc1e7:	3d d8 aa c8 1c       	cmp    eax,0x1cc8aad8
+   dc1ec:	0f 84 15 01 00 00    	je     0xdc307
+   dc1f2:	3d 93 d4 c1 7d       	cmp    eax,0x7dc1d493
+   dc1f7:	75 92                	jne    0xdc18b
+   dc1f9:	b1 e5                	mov    cl,0xe5
+   dc1fb:	ba bf 3c 8c d4       	mov    edx,0xd48c3cbf
+   dc200:	31 d0                	xor    eax,edx
+   dc202:	eb 9c                	jmp    0xdc1a0
+   dc204:	66 66 66 2e 0f 1f 84 	data16 data16 cs nop WORD PTR [rax+rax*1+0x0]
+   dc20b:	00 00 00 00 00 
+   dc210:	3d 2c e8 4d a9       	cmp    eax,0xa94de82c
+   dc215:	74 78                	je     0xdc28f
+   dc217:	3d ec 2c e0 b7       	cmp    eax,0xb7e02cec
+   dc21c:	0f 85 74 ff ff ff    	jne    0xdc196
+   dc222:	c0 c1 04             	rol    cl,0x4
+   dc225:	89 ca                	mov    edx,ecx
+   dc227:	80 e2 33             	and    dl,0x33
+   dc22a:	c0 e2 02             	shl    dl,0x2
+   dc22d:	c0 e9 02             	shr    cl,0x2
+   dc230:	80 e1 33             	and    cl,0x33
+   dc233:	08 d1                	or     cl,dl
+   dc235:	89 ca                	mov    edx,ecx
+   dc237:	80 e2 55             	and    dl,0x55
+   dc23a:	00 d2                	add    dl,dl
+   dc23c:	d0 e9                	shr    cl,1
+   dc23e:	80 e1 55             	and    cl,0x55
+   dc241:	08 d1                	or     cl,dl
+   dc243:	ba cb ec 8c 7c       	mov    edx,0x7c8ceccb
+   dc248:	31 d0                	xor    eax,edx
+   dc24a:	e9 51 ff ff ff       	jmp    0xdc1a0
+   dc24f:	90                   	nop
+   dc250:	3d 74 fc d9 f6       	cmp    eax,0xf6d9fc74
+   dc255:	74 74                	je     0xdc2cb
+   dc257:	3d 9b f4 cc 01       	cmp    eax,0x1ccf49b
+   dc25c:	0f 85 34 ff ff ff    	jne    0xdc196
+   dc262:	c0 c1 04             	rol    cl,0x4
+   dc265:	89 ca                	mov    edx,ecx
+   dc267:	80 e2 33             	and    dl,0x33
+   dc26a:	c0 e2 02             	shl    dl,0x2
+   dc26d:	c0 e9 02             	shr    cl,0x2
+   dc270:	80 e1 33             	and    cl,0x33
+   dc273:	08 d1                	or     cl,dl
+   dc275:	89 ca                	mov    edx,ecx
+   dc277:	80 e2 55             	and    dl,0x55
+   dc27a:	00 d2                	add    dl,dl
+   dc27c:	d0 e9                	shr    cl,1
+   dc27e:	80 e1 55             	and    cl,0x55
+   dc281:	08 d1                	or     cl,dl
+   dc283:	ba 77 d8 2c b6       	mov    edx,0xb62cd877
+   dc288:	31 d0                	xor    eax,edx
+   dc28a:	e9 11 ff ff ff       	jmp    0xdc1a0
+   dc28f:	80 c1 f6             	add    cl,0xf6
+   dc292:	ba b7 1c 81 a8       	mov    edx,0xa8811cb7
+   dc297:	31 d0                	xor    eax,edx
+   dc299:	e9 02 ff ff ff       	jmp    0xdc1a0
+   dc29e:	c0 c1 04             	rol    cl,0x4
+   dc2a1:	89 ca                	mov    edx,ecx
+   dc2a3:	80 e2 33             	and    dl,0x33
+   dc2a6:	c0 e2 02             	shl    dl,0x2
+   dc2a9:	c0 e9 02             	shr    cl,0x2
+   dc2ac:	80 e1 33             	and    cl,0x33
+   dc2af:	08 d1                	or     cl,dl
+   dc2b1:	89 ca                	mov    edx,ecx
+   dc2b3:	80 e2 55             	and    dl,0x55
+   dc2b6:	00 d2                	add    dl,dl
+   dc2b8:	d0 e9                	shr    cl,1
+   dc2ba:	80 e1 55             	and    cl,0x55
+   dc2bd:	08 d1                	or     cl,dl
+   dc2bf:	ba 23 c0 00 2f       	mov    edx,0x2f00c023
+   dc2c4:	31 d0                	xor    eax,edx
+   dc2c6:	e9 d5 fe ff ff       	jmp    0xdc1a0
+   dc2cb:	c0 c1 04             	rol    cl,0x4
+   dc2ce:	89 ca                	mov    edx,ecx
+   dc2d0:	80 e2 33             	and    dl,0x33
+   dc2d3:	c0 e2 02             	shl    dl,0x2
+   dc2d6:	c0 e9 02             	shr    cl,0x2
+   dc2d9:	80 e1 33             	and    cl,0x33
+   dc2dc:	08 d1                	or     cl,dl
+   dc2de:	89 ca                	mov    edx,ecx
+   dc2e0:	80 e2 55             	and    dl,0x55
+   dc2e3:	00 d2                	add    dl,dl
+   dc2e5:	d0 e9                	shr    cl,1
+   dc2e7:	80 e1 55             	and    cl,0x55
+   dc2ea:	08 d1                	or     cl,dl
+   dc2ec:	ba 4c 3a 30 90       	mov    edx,0x90303a4c
+   dc2f1:	31 d0                	xor    eax,edx
+   dc2f3:	e9 a8 fe ff ff       	jmp    0xdc1a0
+   dc2f8:	80 c1 46             	add    cl,0x46
+   dc2fb:	ba 67 f5 2a 23       	mov    edx,0x232af567
+   dc300:	31 d0                	xor    eax,edx
+   dc302:	e9 99 fe ff ff       	jmp    0xdc1a0
+   dc307:	ba 8f 96 11 c5       	mov    edx,0xc511968f
+   dc30c:	31 d0                	xor    eax,edx
+   dc30e:	e9 8d fe ff ff       	jmp    0xdc1a0
+   dc313:	66 66 66 66 2e 0f 1f 	data16 data16 data16 cs nop WORD PTR [rax+rax*1+0x0]
+   dc31a:	84 00 00 00 00 00 
+   dc320:	0f b6 c1             	movzx  eax,cl
+   dc323:	66 0f 6e c8          	movd   xmm1,eax
+   dc327:	66 0f 38 00 c8       	pshufb xmm1,xmm0
+   dc32c:	66 0f 7f 8c 24 50 02 	movdqa XMMWORD PTR [rsp+0x250],xmm1
+   dc333:	00 00 
+   dc335:	c6 84 24 50 02 00 00 	mov    BYTE PTR [rsp+0x250],0x90
+   dc33c:	90 
+   dc33d:	c6 84 24 51 02 00 00 	mov    BYTE PTR [rsp+0x251],0x90
+   dc344:	90 
+   dc345:	c6 84 24 52 02 00 00 	mov    BYTE PTR [rsp+0x252],0x90
+   dc34c:	90 
+   dc34d:	c6 84 24 53 02 00 00 	mov    BYTE PTR [rsp+0x253],0x90
+   dc354:	90 
+   dc355:	c6 84 24 54 02 00 00 	mov    BYTE PTR [rsp+0x254],0x90
+   dc35c:	90 
+   dc35d:	c6 84 24 55 02 00 00 	mov    BYTE PTR [rsp+0x255],0x90
+   dc364:	90 
+   dc365:	c6 84 24 56 02 00 00 	mov    BYTE PTR [rsp+0x256],0x90
+   dc36c:	90 
+   dc36d:	c6 84 24 57 02 00 00 	mov    BYTE PTR [rsp+0x257],0x90
+   dc374:	90 
+   dc375:	c6 84 24 58 02 00 00 	mov    BYTE PTR [rsp+0x258],0x90
+   dc37c:	90 
+   dc37d:	c6 84 24 59 02 00 00 	mov    BYTE PTR [rsp+0x259],0x90
+   dc384:	90 
+   dc385:	c6 84 24 5a 02 00 00 	mov    BYTE PTR [rsp+0x25a],0x90
+   dc38c:	90 
+   dc38d:	c6 84 24 5b 02 00 00 	mov    BYTE PTR [rsp+0x25b],0x90
+   dc394:	90 
+   dc395:	b9 3a 2a df 70       	mov    ecx,0x70df2a3a
+   dc39a:	31 c0                	xor    eax,eax
+   dc39c:	31 d2                	xor    edx,edx
+   dc39e:	eb 60                	jmp    0xdc400
+   dc3a0:	48 0f c8             	bswap  rax
+   dc3a3:	48 89 c2             	mov    rdx,rax
+   dc3a6:	48 c1 ea 04          	shr    rdx,0x4
+   dc3aa:	4c 21 fa             	and    rdx,r15
+   dc3ad:	4c 21 f8             	and    rax,r15
+   dc3b0:	48 c1 e0 04          	shl    rax,0x4
+   dc3b4:	48 09 d0             	or     rax,rdx
+   dc3b7:	48 89 c2             	mov    rdx,rax
+   dc3ba:	48 be 33 33 33 33 33 	movabs rsi,0x3333333333333333
+   dc3c1:	33 33 33 
+   dc3c4:	48 21 f2             	and    rdx,rsi
+   dc3c7:	48 c1 e8 02          	shr    rax,0x2
+   dc3cb:	48 21 f0             	and    rax,rsi
+   dc3ce:	48 8d 04 90          	lea    rax,[rax+rdx*4]
+   dc3d2:	48 89 c2             	mov    rdx,rax
+   dc3d5:	48 be 55 55 55 55 55 	movabs rsi,0x5555555555555555
+   dc3dc:	55 55 55 
+   dc3df:	48 21 f2             	and    rdx,rsi
+   dc3e2:	48 d1 e8             	shr    rax,1
+   dc3e5:	48 21 f0             	and    rax,rsi
+   dc3e8:	48 8d 04 50          	lea    rax,[rax+rdx*2]
+   dc3ec:	ba d8 2e 15 c9       	mov    edx,0xc9152ed8
+   dc3f1:	31 d1                	xor    ecx,edx
+   dc3f3:	66 66 66 66 2e 0f 1f 	data16 data16 data16 cs nop WORD PTR [rax+rax*1+0x0]
+   dc3fa:	84 00 00 00 00 00 
+   dc400:	81 f9 0a 00 7c ef    	cmp    ecx,0xef7c000a
+   dc406:	7e 38                	jle    0xdc440
+   dc408:	81 f9 d2 2e 69 26    	cmp    ecx,0x26692ed2
+   dc40e:	7e 60                	jle    0xdc470
+   dc410:	81 f9 d3 2e 69 26    	cmp    ecx,0x26692ed3
+   dc416:	0f 84 c5 00 00 00    	je     0xdc4e1
+   dc41c:	81 f9 3a 2a df 70    	cmp    ecx,0x70df2a3a
+   dc422:	0f 85 ca 00 00 00    	jne    0xdc4f2
+   dc428:	ba 31 2a a3 9f       	mov    edx,0x9fa32a31
+   dc42d:	4c 89 c0             	mov    rax,r8
+   dc430:	31 d1                	xor    ecx,edx
+   dc432:	eb cc                	jmp    0xdc400
+   dc434:	66 66 66 2e 0f 1f 84 	data16 data16 cs nop WORD PTR [rax+rax*1+0x0]
+   dc43b:	00 00 00 00 00 
+   dc440:	81 f9 8a 04 c6 da    	cmp    ecx,0xdac6048a
+   dc446:	7f 58                	jg     0xdc4a0
+   dc448:	81 f9 e1 fb 1c 8d    	cmp    ecx,0x8d1cfbe1
+   dc44e:	74 71                	je     0xdc4c1
+   dc450:	81 f9 bb 54 77 97    	cmp    ecx,0x977754bb
+   dc456:	0f 85 8f 00 00 00    	jne    0xdc4eb
+   dc45c:	48 0f c8             	bswap  rax
+   dc45f:	ba ed b7 b3 7c       	mov    edx,0x7cb3b7ed
+   dc464:	31 d1                	xor    ecx,edx
+   dc466:	eb 98                	jmp    0xdc400
+   dc468:	0f 1f 84 00 00 00 00 	nop    DWORD PTR [rax+rax*1+0x0]
+   dc46f:	00 
+   dc470:	81 f9 0b 00 7c ef    	cmp    ecx,0xef7c000b
+   dc476:	0f 84 24 ff ff ff    	je     0xdc3a0
+   dc47c:	81 f9 d7 5b 16 19    	cmp    ecx,0x19165bd7
+   dc482:	75 67                	jne    0xdc4eb
+   dc484:	4c 31 c8             	xor    rax,r9
+   dc487:	ba 01 47 c4 7d       	mov    edx,0x7dc44701
+   dc48c:	31 d1                	xor    ecx,edx
+   dc48e:	e9 6d ff ff ff       	jmp    0xdc400
+   dc493:	66 66 66 66 2e 0f 1f 	data16 data16 data16 cs nop WORD PTR [rax+rax*1+0x0]
+   dc49a:	84 00 00 00 00 00 
+   dc4a0:	81 f9 8b 04 c6 da    	cmp    ecx,0xdac6048b
+   dc4a6:	74 2a                	je     0xdc4d2
+   dc4a8:	81 f9 56 e3 c4 eb    	cmp    ecx,0xebc4e356
+   dc4ae:	75 3b                	jne    0xdc4eb
+   dc4b0:	48 0f a4 c0 24       	shld   rax,rax,0x24
+   dc4b5:	ba 81 b8 d2 f2       	mov    edx,0xf2d2b881
+   dc4ba:	31 d1                	xor    ecx,edx
+   dc4bc:	e9 3f ff ff ff       	jmp    0xdc400
+   dc4c1:	48 0f a4 c0 39       	shld   rax,rax,0x39
+   dc4c6:	ba 5a af 6b 1a       	mov    edx,0x1a6baf5a
+   dc4cb:	31 d1                	xor    ecx,edx
+   dc4cd:	e9 2e ff ff ff       	jmp    0xdc400
+   dc4d2:	48 01 f8             	add    rax,rdi
+   dc4d5:	ba 6a ff da 57       	mov    edx,0x57daff6a
+   dc4da:	31 d1                	xor    ecx,edx
+   dc4dc:	e9 1f ff ff ff       	jmp    0xdc400
+   dc4e1:	48 0f a4 c0 26       	shld   rax,rax,0x26
+   dc4e6:	ba 58 2a af fc       	mov    edx,0xfcaf2a58
+   dc4eb:	31 d1                	xor    ecx,edx
+   dc4ed:	e9 0e ff ff ff       	jmp    0xdc400
+   dc4f2:	81 f9 d6 1c d2 64    	cmp    ecx,0x64d21cd6
+   dc4f8:	75 f1                	jne    0xdc4eb
+   dc4fa:	b9 03 b6 59 54       	mov    ecx,0x5459b603
+   dc4ff:	31 d2                	xor    edx,edx
+   dc501:	31 f6                	xor    esi,esi
+   dc503:	49 b8 56 90 16 25 4e 	movabs r8,0x4433cb4e25169056
+   dc50a:	cb 33 44 
+   dc50d:	eb 61                	jmp    0xdc570
+   dc50f:	48 0f ca             	bswap  rdx
+   dc512:	48 89 d6             	mov    rsi,rdx
+   dc515:	48 c1 ee 04          	shr    rsi,0x4
+   dc519:	4c 21 fe             	and    rsi,r15
+   dc51c:	4c 21 fa             	and    rdx,r15
+   dc51f:	48 c1 e2 04          	shl    rdx,0x4
+   dc523:	48 09 f2             	or     rdx,rsi
+   dc526:	48 89 d6             	mov    rsi,rdx
+   dc529:	48 bf 33 33 33 33 33 	movabs rdi,0x3333333333333333
+   dc530:	33 33 33 
+   dc533:	48 21 fe             	and    rsi,rdi
+   dc536:	48 c1 ea 02          	shr    rdx,0x2
+   dc53a:	48 21 fa             	and    rdx,rdi
+   dc53d:	48 8d 14 b2          	lea    rdx,[rdx+rsi*4]
+   dc541:	48 89 d6             	mov    rsi,rdx
+   dc544:	48 bf 55 55 55 55 55 	movabs rdi,0x5555555555555555
+   dc54b:	55 55 55 
+   dc54e:	48 21 fe             	and    rsi,rdi
+   dc551:	48 d1 ea             	shr    rdx,1
+   dc554:	48 21 fa             	and    rdx,rdi
+   dc557:	48 8d 14 72          	lea    rdx,[rdx+rsi*2]
+   dc55b:	be 4f 6b 2b fa       	mov    esi,0xfa2b6b4f
+   dc560:	31 f1                	xor    ecx,esi
+   dc562:	66 66 66 66 66 2e 0f 	data16 data16 data16 data16 cs nop WORD PTR [rax+rax*1+0x0]
+   dc569:	1f 84 00 00 00 00 00 

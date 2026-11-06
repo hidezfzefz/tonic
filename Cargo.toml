@@ -1,0 +1,13 @@
+[workspace]
+resolver = "3"
+members = ["crates/tonic-linker", "crates/tonic-run"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "GPL-3.0-or-later"
+rust-version = "1.85"
+
+[profile.release]
+debug = 1
+strip = "none"

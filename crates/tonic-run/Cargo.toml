@@ -1,0 +1,12 @@
+[package]
+name = "tonic-run"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "tonic-run"
+path = "src/main.rs"
+
+[dependencies]
+tonic-linker = { path = "../tonic-linker" }

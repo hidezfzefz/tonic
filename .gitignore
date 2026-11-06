@@ -1,0 +1,19 @@
+# Local Python environment and caches
+.venv-emu/
+__pycache__/
+*.py[cod]
+
+# Rust build output
+target/
+
+# Freebuff project metadata
+.freebuff/
+
+# Local reverse-engineering toolchain checkouts and runtimes
+tools/node/
+tools/rea/
+
+# Generated emulator captures and logs
+tools/emulation/*.log
+tools/emulation/*.bin
+tools/emulation/report.txt
