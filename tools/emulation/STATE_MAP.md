@@ -4,6 +4,11 @@ Target: installed `libloader.so` from `org.vinegarhq.Sober` 1.8.0
 (`7b6430c7...62cb9d26`), SHA-256
 `9fb3c201bcadca0fd22c0afdeff25af759aecc631f3816a2e63f6b0d147c3da5`.
 
+**Build drift:** these addresses are for the `7b643...` build. The currently
+installed `a611...` build has constructor 4 at `0xf1d20 -> 0xd2030`, and its
+inflate loop is around `0x131a70` (fast-path entry `0x1317a0`). The tables
+below must be rebased before being applied to the new build.
+
 All addresses are virtual addresses. `cl` means the low byte of `ecx`.
 The unmodified five-constructor run stops at `0x1a54b` in the bulk-XOR helper.
 With `--skip-xor` it advances into a statically linked zlib inflate stage around

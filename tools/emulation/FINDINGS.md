@@ -4,6 +4,17 @@ Target: installed `libloader.so` from `org.vinegarhq.Sober` 1.8.0
 (`7b6430c7...62cb9d26`), SHA-256
 `9fb3c201bcadca0fd22c0afdeff25af759aecc631f3816a2e63f6b0d147c3da5`.
 
+**Build drift:** the installed Flatpak has since moved to commit
+`a611b863277f7d33c448111a728c857b8a92cac006da0d33f6d053b1e585106a`
+(`libloader.so` 3,982,961 bytes, SHA-256
+`fa479186dcbacaee61c1afa4a2bc5f759af71561f9dc33d61dd00cb6a8de7f8c`).
+The detailed traces below are pinned to the previous `7b643...` build. On the
+current build the constructor list is `0x151700`, `0x11d970`, `0x123150`,
+`0x180b0`, `0xf1d20`; constructor 4 jumps to `0xd2030`. Its inflate loop is
+around `0x131a70`, with the fast-path entry at `0x1317a0`. A 60M-instruction
+run still stops at `0x131abe`, repeats the six canary writes, and produces no
+`mprotect`. The state maps below have not been rebased to the new addresses.
+
 Sandbox: Unicorn 2.1.4 in `.venv-emu`, x86-64 user-mode. PT_LOAD images are
 mapped at vaddr 0; private stack, TLS, heap, argument and stub pages are used.
 Imports are resolved to return stubs and syscalls are intercepted. No target

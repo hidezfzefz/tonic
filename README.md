@@ -104,7 +104,9 @@ budgets — is in [ARCHITECTURE.md](ARCHITECTURE.md).
 
 The first bring-up target is the Android loader path used by the reference
 runtime. The analysis is performed under Unicorn in user mode; no target code
-is executed natively, and emulated code issues no host syscalls.
+is executed natively, and emulated code issues no host syscalls. The detailed
+map is pinned to the previous `7b643...` build; the current installed
+`a611...` build has shifted addresses but reproduces the same zlib boundary.
 
 Two results define the current state:
 

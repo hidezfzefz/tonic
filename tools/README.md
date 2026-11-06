@@ -51,7 +51,9 @@ blocked until the user supplies them.
 
 Target: `org.vinegarhq.Sober`, branch `stable`, commit
 `7b6430c703e8178baa536062099fc5a1e0c7cf213c0789695fa7660b62cb9d26` (2026-10-05
-refresh). Flatpak `files/` tree digest
+refresh). The currently installed build has moved to `a611b863...85106a`
+(`libloader.so` 3,982,961 bytes, SHA-256 `fa479186...de7f8c`); the tables in
+this section describe the older build. Flatpak `files/` tree digest
 `6fead8632e2ac45505103dae48f28e24e557a9a23c596624b53cd1ce2a447b00`.
 
 | Binary | Bytes | SHA-256 |
