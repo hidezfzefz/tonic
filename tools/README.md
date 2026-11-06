@@ -148,8 +148,10 @@ startup context and page size — it does not install hooks or patch the GOT.
 
 `tools/emulate_dispatcher.py` runs the five `DT_INIT_ARRAY` constructors in
 order under Unicorn, stubs imports, and logs syscalls/writes. It reproduces the
-two `write(-1, ...)` calls. The full constructor path does not reach the
-`mprotect` / `call r14` handoff; the gate is
+two `write(-1, ...)` calls. The unmodified full constructor path stops in the
+bulk-XOR helper at `0x1a540`; with `--skip-xor` it advances into a statically
+linked zlib inflate stage around `0x13e...`, but still does not reach the
+`mprotect` / `call r14` handoff. The gate is
 `0xdc7a3: cmp ecx,0xceb3e876; je 0xdc7c0`.
 
 A focused handoff run (`--entry 0xdc320 --force-call`) captures the real

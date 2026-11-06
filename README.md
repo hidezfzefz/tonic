@@ -117,6 +117,10 @@ Two results define the current state:
   handoff; the observed `0xdaaef` fallback flag is structurally zero under
   the normal table state. The focused handoff capture is a forced emulator
   continuation, not evidence of a working JIT handoff.
+- With the constructor harness's bulk-XOR helper bypassed, the path advances
+  into a statically linked zlib inflate stage. The dispatcher is therefore
+  downstream of an unpacking step; the compressed input and destination are
+  not yet mapped.
 
 The `0xdaaef` regression test runs without the ELF, Unicorn, or generated
 logs:

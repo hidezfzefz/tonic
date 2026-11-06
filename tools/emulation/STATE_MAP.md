@@ -5,9 +5,10 @@ Target: installed `libloader.so` from `org.vinegarhq.Sober` 1.8.0
 `9fb3c201bcadca0fd22c0afdeff25af759aecc631f3816a2e63f6b0d147c3da5`.
 
 All addresses are virtual addresses. `cl` means the low byte of `ecx`.
-The full constructor path does not reach this chain in the current Unicorn
-sandbox; it stops in allocator code at `0x13ed21`. The chain below was reached
-by entering the handoff with its required context and tracing the state tables.
+The unmodified five-constructor run stops at `0x1a54b` in the bulk-XOR helper.
+With `--skip-xor` it advances into a statically linked zlib inflate stage around
+`0x13e...` and still does not reach this chain. The chain below was reached by
+entering the handoff with its required context and tracing the state tables.
 
 ## 1. Entry into the chain
 

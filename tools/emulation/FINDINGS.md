@@ -161,6 +161,43 @@ only a forced key/`r14`/`r12` state could. The focused capture is
 No normal-state route selects `0xdc0fd`; the handoff chain remains reachable
 only with forced conditions.
 
+## Full constructor path: the zlib stage
+
+The unmodified five-constructor run stops at `0x1a54b` when the bulk-XOR helper
+at `0x1a540` is executed under Unicorn. Enabling `--skip-xor` advances through
+constructor 4 (`0xfcd90 -> 0xda830`) and repeats the canary writes, but it does
+not reach the `0xdc0fd` handoff.
+
+With 4M, 12M, and 40M instructions allocated to constructor 4, the run stops
+at `0x13eaad`, `0x13ec80`, and `0x13e96f` (or `0x13e9eb` in an instrumented
+run), all inside the same decode loop. The code at `0x13b7b8` computes an
+Adler-32 modulo 65521 (`0x80078071`, `0xfff1`), and the binary contains zlib's
+error strings (`incorrect header check`, `invalid distance code`, and others).
+This is a statically linked zlib inflate path, not an allocator.
+
+At the first `0x13e6d0` entry (return address `0x141607`), the decoder state's
+`+0x10` field points to a buffer that begins with the bytes `7f 45 4c 46`. The
+first `0x200` bytes do not form a valid x86-64 ELF (`readelf` sees ELF32 MSB
+with an unknown machine), so this is an unresolved packed/intermediate header,
+not yet a usable nested image. The compressed input pointer and total output
+size are also unmapped.
+
+Consequences:
+
+- The `0xda830` dispatcher is downstream of an unpacking/decode stage.
+- The raw constructor path cannot reach the handoff without letting the
+  inflate finish (or bypassing it).
+- The exact compressed input, destination, and output size are unresolved.
+- No `mprotect` occurs on this path, and no dispatcher states are entered.
+
+Reproduction (the `--skip-xor` flag is an instrumentation aid, not a claim
+about native execution):
+
+```
+.venv-emu/bin/python tools/emulate_dispatcher.py <libloader.so> \
+  --skip-xor --max-insn 60000000 --outdir tools/emulation/skipxor
+```
+
 ## Dump provenance
 
 `tools/emulation/code_buffer.bin` is the runtime capture from the forced
